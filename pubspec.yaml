@@ -1,0 +1,27 @@
+name: purple_domains
+description: "common domains for flutter projects"
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  error_handler_with_result: ^1.0.0
+  cross_file: ^0.3.5+2
+  intl: ^0.20.2
+  flutter_polyline_points: ^3.1.0
+  vector_math: ^2.2.0
+  google_maps_flutter: ^2.16.0
+  geolocator: ^14.0.2
+  dio: ^5.9.2
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
