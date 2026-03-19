@@ -17,7 +17,7 @@ export '../domain/repositories/geolocation_repository.dart';
 export '../domain/repositories/image_picker_repository.dart';
 export '../domain/repositories/launcher_repository.dart';
 export '../domain/repositories/preferences_repository.dart';
-export '../domain/repositories/revice_runtime_repository.dart';
+export '../domain/repositories/device_runtime_repository.dart';
 export '../domain/services/authorization_service.dart';
 export '../domain/services/migration.dart';
 export '../domain/services/migration_service.dart';

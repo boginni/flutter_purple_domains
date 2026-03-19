@@ -10,15 +10,10 @@ void main() {
 
   // Paths to the barrel files inside presenter
   final domainBarrel = File('lib/presenter/domain.dart');
-  final externalBarrel = File('lib/presenter/external.dart');
 
   // 1. Process Domain Exports
   final domainFiles = _getDartFiles(Directory('lib/domain'));
   _writeExports(domainBarrel, domainFiles, 'domain');
-
-  // 2. Process External Exports
-  final externalFiles = _getDartFiles(Directory('lib/external'));
-  _writeExports(externalBarrel, externalFiles, 'external');
 
   print('Successfully updated barrel files in lib/presenter/');
 }
