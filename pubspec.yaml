@@ -16,6 +16,9 @@ dependencies:
   google_maps_flutter: ^2.16.0
   geolocator: ^14.0.2
   dio: ^5.9.2
+  url_launcher: ^6.3.2
+  shared_preferences: ^2.5.4
+
   flutter:
     sdk: flutter
 

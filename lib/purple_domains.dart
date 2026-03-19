@@ -1,4 +1,3 @@
 
-export 'presenter/domains.dart';
-export 'presenter/external.dart';
+export 'presenter/domain.dart';
 export 'presenter/packages.dart';
