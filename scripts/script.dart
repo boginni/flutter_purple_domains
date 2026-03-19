@@ -9,7 +9,7 @@ void main() {
   }
 
   // Paths to the barrel files inside presenter
-  final domainBarrel = File('lib/presenter/domain.dart');
+  final domainBarrel = File('lib/flutter_purple_domains.dart');
 
   // 1. Process Domain Exports
   final domainFiles = _getDartFiles(Directory('lib/domain'));
