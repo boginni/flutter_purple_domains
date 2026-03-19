@@ -47,7 +47,7 @@ void _writeExports(File target, List<String> filePaths, String folderName) {
   for (var path in filePaths) {
     // Normalize path and remove 'lib/' prefix to make it relative to the root of lib
     final relativeFromLib = path.replaceFirst('lib/', '').replaceAll(r'\', '/');
-    buffer.writeln("export '../$relativeFromLib';");
+    buffer.writeln("export '$relativeFromLib';");
   }
 
   target.writeAsStringSync(buffer.toString());
