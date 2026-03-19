@@ -12,8 +12,8 @@ void main() {
   final domainBarrel = File('lib/flutter_purple_domains.dart');
 
   // 1. Process Domain Exports
-  final domainFiles = _getDartFiles(Directory('lib/domain'));
-  _writeExports(domainBarrel, domainFiles, 'domain');
+  final domainFiles = _getDartFiles(Directory('lib/src'));
+  _writeExports(domainBarrel, domainFiles);
 
   print('Successfully updated barrel files in lib/presenter/');
 }
@@ -32,20 +32,16 @@ List<String> _getDartFiles(Directory dir) {
 }
 
 /// Writes the export statements to the target file.
-void _writeExports(File target, List<String> filePaths, String folderName) {
+void _writeExports(File target, List<String> filePaths) {
   if (filePaths.isEmpty) {
-    print('No files found for $folderName.');
+    print('No files found for src');
     return;
   }
 
-  // Convert absolute/lib paths to relative paths from lib/presenter/
-  // Since we are in lib/presenter/file.dart, we go up one level to lib/
-  // then into the target folder.
   final buffer = StringBuffer();
-  buffer.writeln('// Generated Barrel File for $folderName');
+  buffer.writeln('// GENERATED FILE - DO NOT EDIT');
 
   for (var path in filePaths) {
-    // Normalize path and remove 'lib/' prefix to make it relative to the root of lib
     final relativeFromLib = path.replaceFirst('lib/', '').replaceAll(r'\', '/');
     buffer.writeln("export '$relativeFromLib';");
   }
